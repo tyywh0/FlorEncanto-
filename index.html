@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FLORENCANTO - Floricultura</title>
+  <meta name="description" content="FLORENCANTO - Floricultura com buquês, arranjos e flores para todas as ocasiões.">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="logo"><img src="/imagens/logo.png" alt=""></a>
+      
+        
+        <div class="search-bar">
+          <input type="text" placeholder="Pesquisar..." id="search-input">
+          <button id="search-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+          </button>
+        </div>
+        
+        <nav class="nav-desktop">
+          <ul>
+            <li><a href="catalogo.html">Buquês</a></li>
+            <li><a href="catalogo.html?categoria=arrangements">Arranjos</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="ajuda.html">Ajuda</a></li>
+          </ul>
+        </nav>
+        
+        <a href="carrinho.html" class="cart-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>
+          <span class="cart-count" id="cart-count">0</span>
+        </a>
+        
+        <button class="mobile-menu-button" id="mobile-menu-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+        </button>
+      </div>
+      
+      <div class="mobile-menu" id="mobile-menu">
+        <div class="search-bar-mobile">
+          <input type="text" placeholder="Pesquisar..." id="search-input-mobile">
+          <button id="search-button-mobile">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+          </button>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="catalogo.html">Buquês</a></li>
+            <li><a href="catalogo.html?categoria=arrangements">Arranjos</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="ajuda.html">Ajuda</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-slider" id="hero-slider">
+      <div class="slider-container">
+        <div class="slides" id="slides">
+          <div class="slide active" style="background-image: url('imagens/19\ de\ mai.\ de\ 2025\ às\ 08_19.jpg')">
+            <div class="slide-content">
+              <h2>Descubra um oásis de tranquilidade e beleza natural</h2>
+              <p>As mais belas flores para alegrar seu dia</p>
+              <a href="catalogo.html" class="btn-primary">Começar</a>
+            </div>
+          </div>
+          <div class="slide" style="background-image: url('imagens/19\ de\ mai.\ de\ 2025\ às\ 08_19\(2\).jpg')">
+            <div class="slide-content">
+              <h2>Onde cada caule conta uma história:</h2>
+              <p>seu refúgio floral.</p>
+              <a href="catalogo.html" class="btn-primary">Explorar</a>
+            </div>
+          </div>
+          <div class="slide" style="background-image: url('imagens/19\ de\ mai.\ de\ 2025\ às\ 08_19\(3\).jpg')">
+            <div class="slide-content">
+              <h2>Entre no FlorEncanto: Onde cada</h2>
+              <p>pétala convida com magia!</p>
+              <a href="catalogo.html" class="btn-primary">Encomendar</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="slider-controls">
+          <span class="slider-dot active" data-index="0"></span>
+          <span class="slider-dot" data-index="1"></span>
+          <span class="slider-dot" data-index="2"></span>
+        </div>
+      </div>
+    </section>
+  
+    <section class="categories">
+      <div class="container">
+        <h2 class="section-title">Nossas Categorias</h2>
+        <div class="category-slider" id="category-slider">
+          <button class="category-btn active" data-category="all">Todos</button>
+          <button class="category-btn" data-category="roses">Rosas</button>
+          <button class="category-btn" data-category="tulips">Tulipas</button>
+          <button class="category-btn" data-category="sunflowers">Girassóis</button>
+          <button class="category-btn" data-category="daisies">Margaridas</button>
+          <button class="category-btn" data-category="lilies">Lírios</button>
+          <button class="category-btn" data-category="orchids">Orquídeas</button>
+        </div>
+      </div>
+    </section>
+   
+    <section class="featured-products">
+      <div class="container">
+        <h2 class="section-title">Buquês em Destaque</h2>
+        <div class="products-grid" id="featured-products">
+          <div class="product-card skeleton">
+            <div class="product-image skeleton-img"></div>
+            <div class="product-details">
+              <div class="skeleton-text"></div>
+              <div class="skeleton-text small"></div>
+            </div>
+          </div>
+          <div class="product-card skeleton">
+            <div class="product-image skeleton-img"></div>
+            <div class="product-details">
+              <div class="skeleton-text"></div>
+              <div class="skeleton-text small"></div>
+            </div>
+          </div>
+          <div class="product-card skeleton">
+            <div class="product-image skeleton-img"></div>
+            <div class="product-details">
+              <div class="skeleton-text"></div>
+              <div class="skeleton-text small"></div>
+            </div>
+          </div>
+          <div class="product-card skeleton">
+            <div class="product-image skeleton-img"></div>
+            <div class="product-details">
+              <div class="skeleton-text"></div>
+              <div class="skeleton-text small"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <div class="logo"> <img src="/imagens/logo 2.png" alt=""></div>
+          <p>Trazendo beleza e alegria para o seu dia através das mais belas flores.</p>
+        </div>
+        
+        <div class="footer-links">
+          <div class="link-group">
+            <h3>Navegação</h3>
+            <ul>
+              <li><a href="index.html">Início</a></li>
+              <li><a href="catalogo.html">Catálogo</a></li>
+              <li><a href="sobre.html">Sobre Nós</a></li>
+              <li><a href="contato.html">Contato</a></li>
+            </ul>
+          </div>
+          
+          <div class="link-group">
+            <h3>Categorias</h3>
+            <ul>
+              <li><a href="catalogo.html">Buquês</a></li>
+              <li><a href="catalogo.html?categoria=arrangements">Arranjos</a></li>
+              <li><a href="catalogo.html?categoria=gifts">Presentes</a></li>
+              <li><a href="catalogo.html?categoria=plants">Plantas</a></li>
+            </ul>
+          </div>
+          
+          <div class="link-group">
+            <h3>Contato</h3>
+            <ul>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                Rua das Flores, 123
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                (11) 5555-5555
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                contato@florencanto.com
+              </li>
+            </ul>
+            
+            <div class="social-links">
+              <a href="#" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+              </a>
+              <a href="#" aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+              </a>
+              <a href="#" aria-label="WhatsApp">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> FLORENCANTO. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
+
